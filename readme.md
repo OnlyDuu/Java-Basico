@@ -12,3 +12,5 @@ Os tipos numéricos podem ser divididos em Integrais (byte, short, int, long, ch
 
 ---
 
+### Operadores Aritméticos em Java
+<img src=src/operadores.jpg>
