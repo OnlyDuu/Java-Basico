@@ -14,3 +14,69 @@ Os tipos numéricos podem ser divididos em Integrais (byte, short, int, long, ch
 
 ### Operadores Aritméticos em Java
 <img src=src/operadores.jpg>
+
+---
+
+### Operadores Lógicos
+Os operadores lógicos aceitam apenas operando do tipo boolean.
+#### Operadores E:
+Símbolo && é chamado de E. Este operador retorna true somente se os dois operandos forem true.<br>
+< operando1 > && < operando2 ><br>
+Se o valor do operando1 for false, então o operador && não verifica o valor do operador2, pois sabe que o resultado já é false.
+
+##### Tabela Verdade E:
+<img src=src/tabela-verdade.png>
+
+##### Exemplo:
+    public class OperadorLogicoE {
+        public static void main(String[] args) {
+            boolean a = true;
+            boolean b = false;
+            boolean c = true;
+
+            System.out.println(a && b);
+            System.out.println(a && c);
+        }
+    }
+Neste caso será impresso false, pois a variável a é true e a variável b é false, depois será impresso true, pois ambas variáveis a e c são true.
+
+#### Operador OU: 
+Símbolo || é chamado de OU. Este operado retorna true caso tenha pelo menos um operando com o valor true.<br>
+< operando1 > || < operando2 ><br>
+Se o valor do operando1 for true, então o operador || não verifica o valor do operando2, pois já sabe que o resultado é true.<br>
+
+##### Tabela Verdade OU:
+<img src=src/tabela-verdade-ou.png>
+
+##### Exemplo: 
+    public class OperadorLogicoOU {
+        public static void main(String[] args) {
+            boolean a = true;
+            boolean b = false;
+            boolean c = false;
+
+            System.out.println(a || b);
+            System.out.println(b || c);
+        }
+    }
+Neste caso será impresso primeiro true, pois a variável a tem o valor true, depois será impresso false, pois as variáveis b e c são false.
+
+#### Operador de negação:
+Símbolo ! é chamado de negação. Este operador retorna true se o operando tem o valor false, e retorna false se o operando o valor true.<br>
+! < operando ><br>
+##### Tabela Verdade: 
+Operando    -   Resultado<br>
+false   -   true<br>
+true    -   false
+##### Exemplo:
+    public class OperadorLogicoNegacao {
+        public static void main(String[] args) {
+            boolean a = true;
+            boolean b = false;
+            boolean c = false;
+
+            System.out.println(!a);
+            System.out.println(!(b || c));
+         }
+    }
+Neste caso primeiro será impresso false, que é a negação de true, depois será impresso true, que é a negação do resultado de b || c que é false.
